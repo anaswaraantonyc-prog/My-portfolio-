@@ -1,0 +1,869 @@
+/* General Body & Typography */
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+        background-color: #2ac3ff;
+        /* Light background for general content */
+        scroll-behavior: smooth;
+        /* Smooth scrolling for back to top */
+        position: relative;
+        /* Needed for animated background positioning */
+    }
+    /* Animated Background */
+    
+    .animated-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #3daece, #6a509e, #66befd, #f689fd);
+        /* Light, vibrant gradient */
+        background-size: 400% 400%;
+        animation: gradientAnimation 15s ease infinite;
+        z-index: -1;
+        /* Puts background behind content */
+        opacity: 0.8;
+        /* Slight transparency for subtleness */
+    }
+    
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+    h1,
+    h2,
+    h3 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+        border-bottom: 3px solid #64b5f6;
+        /* A subtle blue underline */
+        display: inline-block;
+        padding-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Homepage Section (Header) */
+    
+    .homepage-section {
+        min-height: 100vh;
+        /* Full viewport height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #2c3e50;
+        padding: 20px;
+        background: rgba(61, 63, 63, 0.7);
+        /* Slightly transparent white overlay */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 50px;
+    }
+    
+    .profile-card {
+        background: #ffffff;
+        padding: 40px 60px;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgb(189, 230, 248);
+        animation: fadeIn 1.5s ease-out;
+    }
+    
+    .profile-photo-container {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 25px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 6px solid #58ddf4;
+        /* Attractive border around photo */
+        box-shadow: 0 0 0 10px rgb(255, 255, 255);
+        /* Subtle outer glow */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .profile-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .homepage-section h1 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #3f51b5;
+        /* A strong blue for the name */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    
+    .homepage-section p {
+        font-size: 1.5em;
+        color: #546e7a;
+        margin-top: 0;
+    }
+    /* General Section Styling */
+    
+    .section {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 40px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .section:hover {
+        transform: translateY(-5px);
+    }
+    /* About Section */
+    
+    #about p {
+        font-size: 1.1em;
+        text-align: center;
+        max-width: 700px;
+        margin: 20px auto;
+        color: #455a64;
+    }
+    /* Academics Section */
+    
+    .academic-item {
+        background: #e3f2fd;
+        /* Light blue background for each item */
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border-left: 5px solid #64b5f6;
+        transition: background-color 0.3s ease;
+    }
+    
+    .academic-item:hover {
+        background-color: #bbdefb;
+    }
+    
+    .academic-item h3 {
+        color: #3f51b5;
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 1.6em;
+        text-align: left;
+    }
+    
+    .academic-item p {
+        font-size: 1.1em;
+        color: #546e7a;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    
+    .academic-item ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        padding: 0;
+        color: #546e7a;
+    }
+    
+    .academic-item li {
+        margin-bottom: 5px;
+    }
+    /* Skills Section */
+    
+    .skills-category {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .skills-category h3 {
+        font-size: 1.8em;
+        color: #3f51b5;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    .skill-tag {
+        display: inline-block;
+        background-color: #90caf9;
+        /* Soft blue for tags */
+        color: #2c3e50;
+        padding: 10px 20px;
+        border-radius: 25px;
+        margin: 8px;
+        font-size: 1.1em;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .skill-tag:hover {
+        background-color: #64b5f6;
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+    /* Projects Section */
+    
+    .project-card {
+        background: #e8f5e9;
+        /* Light green background for projects */
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        border-left: 6px solid #81c784;
+        /* Green accent border */
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-card h3 {
+        color: #388e3c;
+        /* Darker green for project titles */
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.8em;
+        text-align: left;
+    }
+    
+    .project-description {
+        color: #4caf50;
+        font-size: 1.05em;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    
+    .project-tech {
+        font-style: italic;
+        color: #66bb6a;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    
+    .project-link {
+        display: inline-block;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    
+    .project-link:hover {
+        background-color: #388e3c;
+        transform: scale(1.05);
+    }
+    /* Contact Section */
+    
+    #contact p {
+        font-size: 1.1em;
+        text-align: center;
+        margin-bottom: 25px;
+        color: #455a64;
+    }
+    
+    .social-links {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .social-icon {
+        color: #ffffff;
+        background-color: #3f51b5;
+        /* Blue for social icons */
+        font-size: 1.8em;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .social-icon:hover {
+        background-color: #283593;
+        /* Darker blue on hover */
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .email-text {
+        font-size: 1.1em;
+        color: #455a64;
+    }
+    
+    .email-text a {
+        color: #3f51b5;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .email-text a:hover {
+        text-decoration: underline;
+    }
+    /* Back to Top Button */
+    
+    #backToTopBtn {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Fixed position */
+        bottom: 30px;
+        /* Place the button at the bottom of the page */
+        right: 30px;
+        /* Place the button 30px from the right */
+        z-index: 99;
+        /* Make sure it does not overlap */
+        border: none;
+        /* Remove borders */
+        outline: none;
+        /* Remove outline */
+        background-color: #64b5f6;
+        /* Blue background */
+        color: white;
+        /* White text */
+        cursor: pointer;
+        /* Add a mouse pointer on hover */
+        padding: 15px 20px;
+        /* Some padding */
+        border-radius: 8px;
+        /* Rounded corners */
+        font-size: 1.1em;
+        /* Increase font size */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    #backToTopBtn:hover {
+        background-color: #3f51b5;
+        /* Darker blue on hover */
+        transform: translateY(-3px);
+    }
+    
+    #backToTopBtn i {
+        margin-right: 8px;
+    }
+    /* Animations */
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    /* Responsive Design */
+    
+    @media (max-width: 768px) {
+        .homepage-section h1 {
+            font-size: 2.5em;
+        }
+        .homepage-section p {
+            font-size: 1.2em;
+        }
+        .profile-photo-container {
+            width: 150px;
+            height: 150px;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        .section {
+            padding: 25px;
+            margin: 30px auto;
+        }
+        .skill-tag {
+            padding: 8px 15px;
+            font-size: 1em;
+        }
+        .social-icon {
+            font-size: 1.5em;
+            width: 45px;
+            height: 45px;
+            margin: 0 5px;
+        }
+        #backToTopBtn {
+            padding: 10px 15px;
+            font-size: 1em;
+            bottom: 20px;
+            right: 20px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .profile-card {
+            padding: 30px 40px;
+        }
+        .homepage-section h1 {
+            font-size: 2em;
+        }
+        .homepage-section p {
+            font-size: 1em;
+        }
+        .profile-photo-container {
+            width: 120px;
+            height: 120px;
+        }
+        h2 {
+            font-size: 1.8em;
+        }
+        .skill-tag {
+            margin: 5px;
+        }
+        .project-card h3,
+        .academic-item h3 {
+            font-size: 1.4em;
+        }
+        .project-description,
+        .academic-item p,
+        .email-text {
+            font-size: 0.95em;
+        }
+        .social-icon {
+            font-size: 1.3em;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    /* --- Navigation Bar Styles --- */
+    
+    #navbar {
+        position: fixed;
+        /* Makes the navbar stick to the top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(33, 33, 33, 0.95);
+        /* Semi-transparent dark background */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        /* Ensure it stays on top of other elements */
+        transition: background-color 0.3s ease;
+    }
+    /* Optional: Style change when scrolled */
+    
+    #navbar.scrolled {
+        background-color: rgb(33, 33, 33);
+        /* Fully opaque after scrolling */
+    }
+    
+    #navbar .container {
+        max-width: 1200px;
+        /* Match your content width */
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        /* Space between logo and links */
+        align-items: center;
+        height: 60px;
+        /* Standard height for a navigation bar */
+    }
+    
+    .logo {
+        color: #ffffff;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+    
+    .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin-left: 25px;
+    }
+    
+    .nav-links a {
+        color: #cccccc;
+        /* Light grey text */
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.05em;
+        padding: 10px 0;
+        transition: color 0.3s ease;
+        display: block;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a:focus {
+        color: #4CAF50;
+        /* A distinct hover color, use your portfolio's accent color */
+    }
+    /* --- Padding for Fixed Navbar --- */
+    /* Add padding to the body so content doesn't get hidden behind the fixed navbar */
+    
+    body {
+        padding-top: 60px;
+    }
+    /* Adjust the header so the profile card still looks centered and fine */
+    
+    header.homepage-section {
+        padding-top: 50px;
+        /* Add some space above the profile card */
+    }
+    /* Assuming you have a general .section style, make sure it also has top padding */
+    
+    .section {
+        padding: 60px 20px;
+        /* Ensure sections have space above/below */
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    /* Add this CSS to your style.css file */
+    /* --- Animated Background Styles --- */
+    
+    .animated-background {
+        /* Set the animated element to cover the entire viewport */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* Place it behind all other content */
+        /* Define the initial gradient */
+        background: linear-gradient( -45deg, #27374D, /* Dark Blue/Grey */
+        #1A5276, /* Medium Blue */
+        #2C3E50, /* Darker Blue/Grey */
+        #17202A/* Very Dark Blue */
+        );
+        /* Set the gradient size to be larger than the viewport for movement */
+        background-size: 400% 400%;
+        /* Apply the animation */
+        animation: gradientShift 15s ease infinite;
+    }
+    /* Keyframes for the gradient animation */
+    
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 50%;
+            /* Start position */
+        }
+        50% {
+            background-position: 100% 50%;
+            /* Middle position (moves the gradient) */
+        }
+        100% {
+            background-position: 0% 50%;
+            /* End position (loops back) */
+        }
+    }
+    /* --- Ensure Content Visibility --- */
+    /* For best contrast with a dark animated background, ensure your text and sections are on light/white backgrounds */
+    
+    .section,
+    header.homepage-section {
+        /* Example: Add a background to your main sections to overlay the animation */
+        background-color: rgba(255, 255, 255, 0.95);
+        /* Semi-transparent white or solid white */
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 25px;
+        /* Add space between sections */
+        padding: 40px;
+    }
+    /* Ensure the profile card also has a solid background */
+    
+    .profile-card {
+        background-color: #ffffff;
+        /* Use a solid white for the card */
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    /* Adjust colors to match your dark background if necessary (e.g., if you had dark text on a dark background) */
+    
+    h1,
+    h2,
+    h3,
+    p {
+        color: #333;
+        /* Dark text on white background */
+    }
+    /* --- Video Background Styles --- */
+    
+    #video-background {
+        /* Position and Z-index */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        /* Place it behind all other content */
+        /* Ensure it covers the whole screen while maintaining aspect ratio */
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        /* Center the video */
+        transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        left: 50%;
+        /* Keep the video content from being too distracting */
+        opacity: 0.6;
+        /* Lower the opacity to let the content stand out */
+        filter: grayscale(40%);
+        /* Optional: Reduce color intensity */
+        /* Ensure the video content does not appear over the top of the video container */
+        object-fit: cover;
+    }
+    /* --- Content Visibility Enhancements --- */
+    /* Your existing content styles are good, but let's make sure the text is readable 
+   over the potentially dark parts of the video by giving the overlay more opacity. */
+    
+    .section,
+    header.homepage-section {
+        /* Increase background opacity for better contrast over the video */
+        background-color: rgba(255, 255, 255, 0.90) !important;
+        /* Use 0.90 for a slight window to the video, but clear text space */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        /* Darker shadow for definition */
+    }
+    /* General Body & Typography */
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        line-height: 1.6;
+        color: #2c3e50;
+        /* Dark text for contrast against the light background */
+        background-color: #f8f8f8;
+        /* Base color */
+        scroll-behavior: smooth;
+        padding-top: 60px;
+        /* Space for fixed navbar */
+        position: relative;
+    }
+    /* --- Animated Background (The Light Gradient Version) --- */
+    
+    .animated-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #e0f2f7, #bbdefb, #e3f2fd, #bbdefb);
+        /* Light, vibrant gradient (Adjust colors if you prefer the dark video or dark gradient) */
+        background-size: 400% 400%;
+        animation: gradientAnimation 15s ease infinite;
+        z-index: -1;
+        opacity: 0.9;
+        /* Subtle transparency */
+    }
+    
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    /* --- Navigation Bar Styles --- */
+    
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* Navbar remains solid/dark for readability and contrast */
+        background-color: rgba(33, 33, 33, 0.95);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        z-index: 1000;
+        transition: background-color 0.3s ease;
+    }
+    
+    #navbar.scrolled {
+        background-color: rgb(33, 33, 33);
+    }
+    
+    #navbar .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+    }
+    
+    .logo {
+        color: #ffffff;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+    
+    .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin-left: 25px;
+    }
+    
+    .nav-links a {
+        color: #cccccc;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.05em;
+        padding: 10px 0;
+        transition: color 0.3s ease;
+        display: block;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a:focus {
+        color: #3f51b5;
+        /* Match your primary blue accent */
+    }
+    /* --- Global Headings --- */
+    
+    h1,
+    h2,
+    h3 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+        border-bottom: 3px solid #64b5f6;
+        display: inline-block;
+        padding-bottom: 10px;
+        margin: 0 auto 25px auto;
+        /* Re-center H2 */
+        display: block;
+        width: fit-content;
+    }
+    /* * --- INTEGRATED SECTIONS (CRITICAL CHANGES HERE) ---
+ * We remove the background, box-shadow, and hard padding to let the content sit directly 
+ * over the animated background.
+*/
+    
+    .homepage-section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #2c3e50;
+        padding: 20px;
+        background: none;
+        /* REMOVE BACKGROUND */
+        box-shadow: none;
+        /* REMOVE SHADOW */
+        margin-bottom: 50px;
+    }
+    
+    .profile-card {
+        /* The profile card remains slightly defined for focus */
+        background: rgba(255, 255, 255, 0.85);
+        /* Semi-transparent white */
+        padding: 40px 60px;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        animation: fadeIn 1.5s ease-out;
+    }
+    
+    .section {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 40px 20px;
+        /* Reduced side padding for flow */
+        background: none;
+        /* REMOVE BACKGROUND */
+        box-shadow: none;
+        /* REMOVE SHADOW */
+        transition: none;
+        /* Remove transform hover */
+    }
+    
+    .section:hover {
+        transform: none;
+    }
+    /* --- Section Content Revisions for Visibility --- */
+    /* Academics items need individual backgrounds to separate them, but make them subtle */
+    
+    .academic-item {
+        background: rgba(255, 255, 255, 0.7);
+        /* Subtle white box */
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border-left: 5px solid #64b5f6;
+        transition: background-color 0.3s ease;
+    }
+    
+    .academic-item:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    /* Skill tags need to stand out over the background */
+    
+    .skill-tag {
+        background-color: #90caf9;
+        color: #2c3e50;
+        /* ... (rest of skill-tag styles) ... */
+    }
+    /* Project cards need individual backgrounds to separate them */
+    
+    .project-card {
+        background: rgba(255, 255, 255, 0.7);
+        /* Subtle white box */
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        border-left: 6px solid #81c784;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+    /* --- Rest of your styles (H1, P, Links, Social, Media Queries, etc.) go here --- */
+    /* (Assuming the rest of your provided CSS is appended below) */

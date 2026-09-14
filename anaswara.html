@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Student Portfolio</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="animated-background"></div>
+
+    <nav id="navbar">
+        <div class="container">
+            <a href="#" class="logo">ANASWARA ANTONY</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="homepage-section">
+        <div class="profile-card">
+            <div class="profile-photo-container">                
+<img src="images\imgage3.jpg" alt="Profile Picture" width=250 height=250 >
+</div>
+            <h1>ANASWARA ANTONY</h1>
+            <p>Aspiring Developer | Student | Innovator</p>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hello! I'm Anaswara Antony from wayand ,a passionate student currently pursuing MCA at MACFAST college. I'm deeply interested in web development, data science, AI and love to explore new technologies. My goal is to build innovative solutions, contribute to
+            open source projects, solve real-world problems.</p>
+    </section>
+
+    <section id="academics" class="section">
+        <h2>Academics</h2>
+        <div class="academic-item">
+            <h3>Master's in computer applications</h3>
+            <p>MACFAST college| Ongoing</p>
+
+        </div>
+        <div class="academic-item">
+            <h3>Bachelor's of computer applications</h3>
+            <p>Alphonsa arts and science college | [2022] - [2025]</p>
+        </div>
+         <div class="academic-item">
+            <h3>Higher secondary</h3>
+            <p>Sarvodhaya HSS| [2020] - [2022]</p>
+        </div>
+         <div class="academic-item">
+            <h3>High school</h3>
+            <p>Nirmala HS | [2018] - [2020]</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-category">
+            <h3>Programming Languages</h3>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript</span>
+            
+        </div>
+        <div class="skills-category">
+            <h3>Web Technologies</h3>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">SQL</span>
+        </div>
+        <div class="skills-category">
+            <h3>Tools & Platforms</h3>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Docker</span>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Two wheeler spare parts</h3>
+            <p class="project-description">This project helps to identify the two wheeler spareparts.In this project we can add our product and purchase others products</p>
+            <p class="project-tech"><strong>Technologies:</strong> HTML, CSS, JavaScript,Python DJANGO</p>
+           
+        </div>
+            </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me! I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+        <div class="social-links">
+             
+            <a href="https://instagram.com/https://about.instagram.com/micro_site/url/?click_from_context_menu=true&country=IN&destination=https%3A%2F%2Fwww.instagram.com%2F&event_type=click&last_nav_impression_id=1mrg5JHDD5kOUE9Yc&max_percent_page_viewed=16&max_viewport_height_px=738&max_viewport_width_px=1528&orig_http_referrer=https%3A%2F%2Fl.instagram.com%2F&orig_request_uri=https%3A%2F%2Fabout.instagram.com%2F&region=apac&scrolled=true&session_id=0HJ2rIG5Q1MywoK2H&site=instagram_about" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:youremail@example.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="email-text">Or send me an email: <a href="mailto:anaswaraantonyc@gmail.com">anaswaraantonyc@gmail.com</a></p>
+    </section>
+
+    <button id="backToTopBtn" title="Go to top">
+        <i class="fas fa-chevron-up"></i> Back to top
+    </button>
+
+    <script>
+        // Get the button
+        let backToTopButton = document.getElementById("backToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+
+            // Optional: Add a class to the navbar when scrolling for a visual change
+            let navbar = document.getElementById("navbar");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        backToTopButton.addEventListener("click", function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        });
+    </script>
+</body>
+
+</html>
